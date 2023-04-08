@@ -1,5 +1,4 @@
 {
-  "homepage": "https://Swapnil-2503.github.io/SwapCode",
   "name": "swapcode",
   "version": "0.1.0",
   "private": true,
@@ -23,12 +22,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start:front": "react-scripts start",
-    "start": "npm run build",
+    "start": "npm run build && npm run server",
     "server": "node server.js",
-    "build": "react-scripts build && npm run server",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
