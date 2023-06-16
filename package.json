@@ -21,14 +21,14 @@
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start:front": "react-scripts start",
-    "start": "npm run build && npm run server",
-    "server": "node server.js",
-    "build": "react-scripts build && npm run server",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+ "scripts": {
+  "start:front": "react-scripts start",
+  "start": "concurrently \"npm run start:front\" \"npm run server\"",
+  "server": "nodemon server.js",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
